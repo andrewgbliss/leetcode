@@ -27,6 +27,8 @@
 // 0 <= s.length <= 5 * 104
 // s consists of English letters, digits, symbols and spaces.
 
+// This is scanning the entire array
+
 /**
  * @param {string} s
  * @return {number}
@@ -49,6 +51,34 @@ var lengthOfLongestSubstring = function (s) {
 			longest = arr.length;
 		}
 		arr = [];
+	}
+	return longest;
+};
+
+// Sliding Window
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+ var lengthOfLongestSubstring = function(s) {
+	var left = 0, right = 0;
+	var longest = 0;
+	var map = {};
+	while (right < s.length) {
+			var c = s[right];
+			right += 1;
+			if (map[c]) {
+					map[c] += 1;
+			} else {
+					map[c] = 1;
+			}
+			while (map[c] > 1) {
+					var d = s[left];
+					left += 1;
+					map[d] -= 1;
+			}
+			longest = Math.max(longest, right - left);
 	}
 	return longest;
 };
