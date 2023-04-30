@@ -50,6 +50,7 @@ var twoSum = function (nums, target) {
 
 // O(n)
 // Memory O(n) because storing a hashmap
+// Can use the complimentary or diff of target and num to find the index in the hashmap
 /**
  * @param {number[]} nums
  * @param {number} target
