@@ -17,6 +17,8 @@ function merge(arr, l, m, r) {
     let j = 0;
     let k = l;
 
+    // Fill in from the left and the right, which ever one is less than or greater than
+    // The left will win if they are equal
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
             arr[k] = L[i];
@@ -28,12 +30,14 @@ function merge(arr, l, m, r) {
         k++
     }
 
+    // Fill in the rest of the left arr
     while (i < n1) {
         arr[k] = L[i];
         i++;
         k++;
     }
 
+    // Fill in the rest of the right arr
     while (j < n2) {
         arr[k] = R[j];
         j++;

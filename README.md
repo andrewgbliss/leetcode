@@ -18,7 +18,7 @@ let middle = left + Math.floor((right - left) / 2);
 
 # Hashmap
 
-Can cache results of an algorithm for later use. So it doesn't have to recalculate the result.
+A hashmap can be useful to store a key value pair for easy lookup. Can cache results of an algorithm for later use. So it doesn't have to recalculate the result.
 
 # Divide and conquer
 
@@ -33,6 +33,11 @@ Quicksort
 # Binary search
 
 Binary Search is defined as a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N). 
+
+Find the middle, 
+    if the middle is less than the target then move the left pointer to the middle plus one
+    if the middle is more than the target then move the right pointer to the middle minus one
+
 
 # Stack
 

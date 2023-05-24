@@ -27,7 +27,7 @@
 // Only one valid answer exists.
 
 
-// Brute force scanning of array
+// Brute force scanning of array - scans every possible value
 // O(n ^ 2)
 /**
  * @param {number[]} nums
@@ -47,6 +47,7 @@ var twoSum = function (nums, target) {
 // O(n)
 // Memory O(n) because storing a hashmap
 // Can use the complimentary or diff of target and num to find the index in the hashmap
+// This is better because it stores previous results and the index for possible matches
 /**
  * @param {number[]} nums
  * @param {number} target
