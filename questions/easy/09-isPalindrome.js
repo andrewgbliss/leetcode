@@ -32,9 +32,29 @@
 // Follow up: Could you solve it without converting the integer to a string?
 
 // Solve it using a string
-
+// This uses two pointers a left and right and if they are not equal at all times
+// then its not a palindrome
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) { 
+    let str = x.toString();
+    let l = 0;
+    let r = str.length - 1;
+    while (l < r) {
+        if (str[l] !== str[r]) {
+            return false;
+        }
+        l++;
+        r--;
+    }
+    return true;
+};
 
 // Solve it without using a string
+// This uses the modulus and division to make a reversed number
+// Need to work this out on paper to understand
 /**
  * @param {number} x
  * @return {boolean}
