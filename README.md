@@ -41,3 +41,4 @@ Find the middle,
 
 # Stack
 
+The stack data structure is a linear data structure that accompanies a principle known as LIFO (Last In First Out) or FILO (First In Last Out).
