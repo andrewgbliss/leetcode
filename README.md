@@ -42,3 +42,15 @@ Find the middle,
 # Stack
 
 The stack data structure is a linear data structure that accompanies a principle known as LIFO (Last In First Out) or FILO (First In Last Out).
+
+# Recursion
+
+Dividing the problem into smaller sub problems and recursively call itself until all the problems are solved.
+
+Start with a base case so the recursion will end. If it doesn't end it will call an infinite loop.
+Diving the problem into smaller problems.
+
+# Traversing Linked Lists
+
+Head is the start of the list
+Current is the current pointer of the list
