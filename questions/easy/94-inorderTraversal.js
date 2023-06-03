@@ -33,15 +33,42 @@
 	var arr = [];
 	var s = [];
 	while (curr != null || s.length > 0) {
-			while (curr != null) {
-					s.push(curr);
-					curr = curr.left;
-			}
+		while (curr != null) {
+			s.push(curr);
+			curr = curr.left;
+		}
 
-			curr = s.pop();
-			arr.push(curr.val);
+		curr = s.pop();
+		arr.push(curr.val);
 
-			curr = curr.right;
+		curr = curr.right;
 	}
 	return arr;
 };
+
+// Recursion
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function(root) {
+    const arr = [];
+    inOrder(root, arr);
+    return arr;
+};
+
+const inOrder = (root, arr) => {
+    if (root === null) return null;
+    inOrder(root.left, arr);
+    arr.push(root.val);
+    inOrder(root.right, arr);
+}
