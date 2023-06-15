@@ -87,3 +87,4 @@ const binarySearchRecursive = (arr, target, l = 0, h = arr.length - 1) => {
 }
 
 console.log(binarySearchRecursive([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 9));
+
